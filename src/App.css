@@ -1,0 +1,39 @@
+.App {
+  text-align: center;
+}
+
+.champlist{
+
+  text-align: left;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  list-style-type: none;
+  background-color:rgb(138, 138, 138);
+}
+.champ-container{
+
+  background-color:rgb(138, 138, 138);
+}
+
+
+
+
+.App-header {
+  
+  display: flex;
+  
+  
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  background-color:rgb(49, 31, 99);
+  color:gold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.App-title{
+  
+}
