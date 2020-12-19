@@ -20,15 +20,12 @@ class League extends Component {
     // this.setJoke = this.setJoke.bind(this);
   }
   
-
+// REPLACE WITH HOOK
   componentDidMount() {
     this.fetchChamp();
   }
 
-  handleNewJokeClick = () => {
-    console.log("clicked new joke");
-    this.fetchChamp();
-  };
+ 
 
   fetchChamp = () => {
     fetch(JOKE_API)
@@ -57,9 +54,11 @@ class League extends Component {
 
   render() {
       console.log(this.state.champions.data);
+      // used to map over the data and display the underlying data in an itterative fashion and the key gives the elemts a stable identity so the DOM can render it
       const champions = Object.keys(this.state.champions.data).map(( champion,index)=>{
           return (
             <div>
+             {/* ${} embeds the value of a variable in the given string and is a Javascript ES6 syntax */}
             <li key={`${champion}/${index}`} >{champion}
             {/* <Link to ="/stocks/:symbol">{champion.id}</Link> */}
             </li>
