@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import {Spring} from 'react-spring/renderprops'
 // import {Link,Route} from "react-router-dom";
 import "./App.css";
+import logo from './lo.png';
 
 const JOKE_API = "http://ddragon.leagueoflegends.com/cdn/10.25.1/data/en_US/champion.json";
 
@@ -19,6 +20,11 @@ class League extends Component {
 
     // this.setJoke = this.setJoke.bind(this);
   }
+
+  // state={
+  //   champions: {data:{}},
+  //     data:[],
+  // }
   
 // REPLACE WITH HOOK
   componentDidMount() {
@@ -76,9 +82,11 @@ class League extends Component {
             <div style={props}>
               <div style={c1Style} className="App">
           <header className="App-header">
-            <h1 className="App-title">League of Legends Champions</h1>
+            
+          <img src={logo}  className="Logo" />
+            
           </header>
-          
+          <h1 className="App-title">Current League of Legends Champions</h1>
          
             <div>
             {this.state.champions && <p className="champ-container">
